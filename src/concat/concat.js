@@ -12451,5 +12451,6 @@ if (typeof jQuery === 'undefined') {
 
 }(jQuery);
 
-console.log("gulp bootstrap starter");
-console.log('@muslihzarth');
+// console.log("gulp bootstrap starter");
+
+// console.log('@muslihzarth');

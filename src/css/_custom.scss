@@ -6,7 +6,7 @@
 
 // -----------------------------------------------------------------------------
 
-.about, .service, .clients , .our-team {
+.about, .service, .clients , .our-team, .galeri{
     padding: 50px 0 !important;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .title {
-    margin-bottom : 30px;
+    margin-bottom : 20px;
     font-size: 2.5em;
     // text-transform: uppercase;
     letter-spacing: 2px;
@@ -62,7 +62,7 @@ header {
         border : none;
             
         a {    
-            // font-size: 1.2em;
+            font-size: .9em;
             float: none;
             display : block;
             font-weight:500;
@@ -78,8 +78,6 @@ header {
         }
     }
 }
-
-
 
 .hero-image {
     img {
@@ -115,7 +113,44 @@ header {
 
 // SERVICE
 .service {
-    // background: #f7f7f7;
+    .ubah {
+        color: #51ADC0;
+    }
+
+    .box {
+      background:#fff;
+      transition:all 0.2s ease;
+      border:2px dashed #dadada;
+      margin-top: 10px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-clip: padding-box;
+      padding:10px 10px 10px 10px;
+      min-height:270px;
+    }
+
+    .box:hover {
+      border:2px solid #525C7A;
+    }
+
+    .box span.box-title {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    .box .box-content {
+      padding: 16px;
+      border-radius: 0 0 2px 2px;
+      background-clip: padding-box;
+      box-sizing: border-box;
+    }
+    .box .box-content p {
+      color:#515c66;
+      text-transform:none;
+    }
+
 }
 // -----------------------------------------------------------------------------
 
@@ -147,10 +182,11 @@ header {
 
     a.all-client {
         @include transition-duration(.4s);
-        margin-top: 30px;
+        font-size: 12px;
+        margin-top: 10px;
         display: inline-block;
         background: $biru;
-        padding: 15px 30px;
+        padding: 10px 20px;
         color:#fff;   
 
         &:hover {
@@ -207,6 +243,7 @@ label {
 
 //CONTACT
 .contact {
+    border-top: 10px solid #ae2b26;
     h3{
         font-size: 1.3em;
         font-weight: 500;
@@ -246,7 +283,9 @@ footer{
 
 // -----------------------------------------------------------------------------
 
+.galeri {
 
+}
 
 // TESTIMONI
 // .testimoni {
