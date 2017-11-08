@@ -1,4 +1,4 @@
-// FORM ELEMENT 
+// FORM ELEMENT
     input, textarea {
         border-radius:0 !important;
         padding: 10px;
@@ -6,16 +6,19 @@
 
 // -----------------------------------------------------------------------------
 
-
 #menuresv{
     display: none;
 }
 
-#about, #service, #client, #galeri{
+#showslide {
+    margin-top: 120px;
+}
+
+#about, #service, #client, #galeri, #mission, #output{
     padding: 50px 0 !important;
 }
 
-h1{ 
+h1{
     margin:0 0 20px 0;
 }
 
@@ -36,38 +39,41 @@ body {
 
 .title {
     margin-bottom : 20px;
-    font-size: 2.5em;
-    // text-transform: uppercase;
+    font-size: 2em;
+    text-transform: uppercase;
     letter-spacing: 2px;
+    color: #b72924;
+    font-weight: 400;
 }
 
 #logo {
-    position : absolute; 
+    position : absolute;
     top:15px;
     z-index: 9999;
     display: block;
     img {
-        height:50px !important; 
+        height:50px !important;
         width:auto;
-        
-    }      
+    }
 }
-
 
 #about, #service, #contact, footer {
     padding: 30px 0;
 }
 
 header {
-    // background : #2f3840;
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index:999;
     background: #fff;
     border-bottom:8px solid darken($biru,0%);
 
     .navbar {
-        margin-bottom:0;  
+        margin-bottom:0;
         border : none;
-            
-        a {    
+
+        a {
             font-size: .9em;
             float: none;
             display : block;
@@ -77,20 +83,26 @@ header {
             color : darken($biru,5%) !important;
             background:none !important;
             @include transition(all 0.3s ease);
-            &:hover {            
-                background : $biru !important;                
-                color : white !important;                    
+            &:hover {
+                background : $biru !important;
+                color : white !important;
             }
         }
     }
 }
 
-
 // ABOUT
-#about {
+#mission, #service{
     background: #f5f5f5;
-    
-    padding: 50px 0 0 0;
+}
+
+#about, #mission, #output {
+    letter-spacing: 1.5px;
+    line-height: 1.6em;
+}
+
+#about {
+    // padding: 50px 0 0 0;
     img {
         width : 100%
     }
@@ -101,19 +113,19 @@ header {
 // SERVICE
 #service {
     .box {
-      background:#fff;
-      transition:all 0.2s ease;
-      border:2px dashed #dadada;
-      margin-top: 10px;
-      box-sizing: border-box;
-      border-radius: 5px;
-      background-clip: padding-box;
-      padding:10px 10px 10px 10px;
-      min-height:320px;
+        background:#fff;
+        transition:all 0.2s ease;
+        border:2px dashed #dadada;
+        margin-top: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-clip: padding-box;
+        padding:10px 10px 10px 10px;
+        min-height:320px;
     }
 
     .box:hover {
-      border:2px solid #525C7A;
+        border:2px solid #525C7A;
     }
 
     .box span.box-title {
@@ -124,14 +136,14 @@ header {
     }
 
     .box .box-content {
-      padding: 16px;
-      border-radius: 0 0 2px 2px;
-      background-clip: padding-box;
-      box-sizing: border-box;
+        padding: 16px;
+        border-radius: 0 0 2px 2px;
+        background-clip: padding-box;
+        box-sizing: border-box;
     }
     .box .box-content p {
-      color:#515c66;
-      text-transform:none;
+        color:#515c66;
+        text-transform:none;
     }
 
 }
@@ -140,24 +152,23 @@ header {
 
 //CLIENT
 #client {
-    background: #f5f5f5;
-
     ul {
         display: inline-block;
         padding: 0;
         li {
+            // border: 1px solid #e3e3e3;
             list-style: none;
             margin: 5px;
             display: inline-block;
-        }     
+        }
     }
-   
+
     img {
-        width: 200px;
+        max-width: 120px;
         height: auto;
         @include transition-duration(.4s);
-        opacity: 0.7;
-        
+        opacity: 0.8;
+
         &:hover{
             opacity: 1;
         }
@@ -170,7 +181,7 @@ header {
         display: inline-block;
         background: $biru;
         padding: 10px 20px;
-        color:#fff;   
+        color:#fff;
 
         &:hover {
             text-decoration: none;
@@ -232,23 +243,36 @@ footer{
 // -----------------------------------------------------------------------------
 
 
-
 @media only screen and (max-width : 768px) {
+
+    #about, #service, #client, #galeri, #mission, #output{
+        padding: 20px 0 !important;
+    }
+    #about {
+        margin-top: 60px;
+    }
+
     h1,h2,h3,p {
+        text-align: center;
+        line-height: normal;
+    }
+
+    #contact {
         text-align: center;
     }
 
     h1.title {
         margin-top: 10px;
+
     }
     #client img {
-        width: 100px;
+        width: 60px;
     }
     #showslide {
         display: none !important;
     }
 
-    .overlay a {font-size: 20px; color:#fff}
+    // .overlay a {font-size: 20px; color:#fff}
     .overlay .closebtn {
         font-size: 40px;
         top: 15px;
@@ -260,7 +284,6 @@ footer{
         position: fixed;
         top: 10px;
         right: 20px;
-        // background: #43b8ff;
         background:#3a52a0;
         color: #fff;
         padding: 20px;
@@ -268,26 +291,22 @@ footer{
         z-index: 6;
         width: 20px;
         height: 20px;
-        // overflow: hidden;
-        z-index: 90;
+        z-index: 9999;
         box-shadow: 0 0 10px 1px rgb(108, 108, 108);
         span {
-
             font-size: 20px;
             display: block!important;
             top: -10px;
             right: 10px;
-
             cursor: pointer;
         }
     }
 
-
     header {
         height: 65px;
-    
+
         #logo img{
-            width: auto !important;    
+            width: auto !important;
             // margin-top: 10px;
             height: 30px !important;
             // top : 0;
@@ -296,67 +315,57 @@ footer{
 
     nav {
         ul {
-            display: none;  
-        }           
+            display: none;
+        }
     }
 }
 
-// menu resv
-/* The Overlay (background) */
 .overlay {
     ul {
         list-style-type: none;
         padding: 0;
     }
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+
     height: 0%;
     width: 100%;
-    position: fixed; /* Stay in place */
-    z-index: 99999; /* Sit on top */
+    position: fixed;
+    z-index: 99999;
     left: 0;
     top: 0;
     background-color: #26335e;
-    
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    overflow-x: hidden;
+    transition: 0.5s;
     a {
         color:#e3e3e3;
+        letter-spacing: 4px;
         text-decoration: none;
-        font-size: 36px;
-        display: block; /* Display block instead of inline */
-        transition: 0.3s; /* Transition effects on hover (color) */
+        font-size: 2em;
+        display: block;
+        transition: 0.3s;
         &:hover{
             color:#43b8ff;
         }
     }
-
 }
 
-/* Position the content inside the overlay */
 .overlay-content {
     position: relative;
-    top: 25%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    // margin-top: 30px;
 }
 
-/* The navigation links inside the overlay */
 .overlay a {
     // padding: 8px;
-
 }
 
-/* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
     // color: #43b8ff;
 }
 
-/* Position the close button (top right corner) */
 .overlay .closebtn {
     position: absolute;
     top: -2px;
     right: 27px;
- 
 }
