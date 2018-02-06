@@ -243,16 +243,18 @@ label {
 #galeri {
     margin-top: 80px;
     ul#album {
-    margin:20px 0;
+    // margin:20px 0;
     padding: 0;
     display: flex;
     flex-direction:row;
-    justify-content:space-between;  
+    justify-content:center;  
+    flex-wrap:wrap;
     
 
         li {
             list-style: none;
             width:32%;
+            margin: 0 5px 5px 5px;
 
             a {
                 text-decoration: none;
@@ -261,7 +263,8 @@ label {
                 padding: 20px;
                 color: #fff;
                 transition-duration: .5s;
-                font-size: 2em;
+                font-size: 1em !important;
+                font-weight: 500;
                 width: 100%;
                 
                 
