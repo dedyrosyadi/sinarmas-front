@@ -200,7 +200,7 @@ label {
 	margin-top: 80px;
 	ul#album {
 		padding: 0;
-		display: flex;
+		display: flex !important;
 		flex-wrap:wrap;
 		justify-content:center;
 		.album-title {
@@ -213,7 +213,8 @@ label {
 			text-align: center;
 		}
 		a {
-			font-size: 1.5em;
+			text-transform: uppercase;
+			font-weight: 400;
 			display: inline-block;
 			width: 100%;
 			padding: 10px;
@@ -250,13 +251,10 @@ footer{
 	}
 	ul#album {
 		display: block !important;
-		li {
+
+		li.album-title {
 			width: 100% !important;
-			margin-bottom: 10px;
-			a {
-				color: #fff;
-				font-size: 1.3em;
-			}
+			margin: 0 0 10px 0 !important;
 		}
 	}
 	#contact {
