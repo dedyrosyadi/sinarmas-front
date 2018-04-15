@@ -3,6 +3,11 @@ input, textarea {
 	border-radius:0 !important;
 	padding: 10px;
 }
+
+// gallery plugin
+#gallery-1 .gallery-item {
+	width: 100% !important;
+}
 // -----------------------------------------------------------------------------
 #menuresv{
 	display: none;
